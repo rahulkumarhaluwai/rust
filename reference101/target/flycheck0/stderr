@@ -1,0 +1,60 @@
+   0.037065300s  INFO prepare_target{force=false package_id=reference101 v0.1.0 (D:\Projects\rust\reference101) target="reference101"}: cargo::core::compiler::fingerprint: fingerprint error for reference101 v0.1.0 (D:\Projects\rust\reference101)/Check { test: false }/TargetInner { name: "reference101", doc: true, ..: with_path("D:\\Projects\\rust\\reference101\\src\\main.rs", Edition2024) }
+   0.037140100s  INFO prepare_target{force=false package_id=reference101 v0.1.0 (D:\Projects\rust\reference101) target="reference101"}: cargo::core::compiler::fingerprint:     err: failed to read `D:\Projects\rust\reference101\target\debug\.fingerprint\reference101-4de0f179c15d3262\bin-reference101`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.346493000s  INFO prepare_target{force=false package_id=reference101 v0.1.0 (D:\Projects\rust\reference101) target="reference101"}: cargo::core::compiler::fingerprint: fingerprint error for reference101 v0.1.0 (D:\Projects\rust\reference101)/Check { test: true }/TargetInner { name: "reference101", doc: true, ..: with_path("D:\\Projects\\rust\\reference101\\src\\main.rs", Edition2024) }
+   0.346583600s  INFO prepare_target{force=false package_id=reference101 v0.1.0 (D:\Projects\rust\reference101) target="reference101"}: cargo::core::compiler::fingerprint:     err: failed to read `D:\Projects\rust\reference101\target\debug\.fingerprint\reference101-5ec3ccc8a7c248a6\test-bin-reference101`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+    Checking reference101 v0.1.0 (D:\Projects\rust\reference101)
+error: could not compile `reference101` (bin "reference101") due to 2 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `reference101` (bin "reference101" test) due to 2 previous errors
