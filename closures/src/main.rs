@@ -1,5 +1,5 @@
 fn main() {
-    // 1. Filter words longer than 3 characters and uppercase them
+    // 1. Filter and uppercase words
     let words = vec!["hello", "world", "rust", "is", "great"];
 
     let result: Vec<String> = words
@@ -10,7 +10,7 @@ fn main() {
 
     println!("Filtered words: {:?}", result);
 
-    // 2. FnMut closure because it modifies the captured counter
+    // 2. FnMut closure because it changes counter
     let mut counter = 0;
 
     let mut increment = || {
@@ -22,12 +22,12 @@ fn main() {
         println!("Counter: {}", counter);
     }
 
-    // 3. move transfers ownership of text into the closure
+    // 3. move gives ownership of text to the closure
     let text = String::from("hello");
 
     let reverse = move || {
-        // chars() only borrows text, so the closure is still Fn
-        // even though move made the closure own text.
+        // text is borrowed here, not consumed
+        // so the closure implements Fn
         text.chars().rev().collect::<String>()
     };
 
@@ -35,9 +35,9 @@ fn main() {
     println!("Reversed again: {}", reverse());
 
     // text cannot be used here because ownership was moved
-    // into the closure. This follows the ownership rules from Lesson 2.
+    // into the closure.
 
-    // 4. Calculate factorial using fold
+    // 4. Factorial using fold
     let n = 5;
 
     let factorial = (1..=n).fold(1, |acc, x| acc * x);
