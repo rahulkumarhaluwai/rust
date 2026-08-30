@@ -1,15 +1,3 @@
-// main.rs
-//
-// Three self-contained demos of std::sync::mpsc channels:
-//   1. A three-stage pipeline (generate -> square -> collect), no shared
-//      mutable state anywhere - just ownership moving through channels.
-//   2. sync_channel backpressure, timestamped, comparing bound = 0 vs bound = 5.
-//   3. Why dropping every Sender lets a `for` loop over a Receiver end on
-//      its own instead of blocking forever.
-//
-// Run with:  rustc main.rs -o pipeline && ./pipeline
-// (or drop it in a `cargo new` project as src/main.rs)
-
 use std::sync::mpsc::{self, Receiver, SyncSender};
 use std::thread;
 use std::time::{Duration, Instant};
